@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Plataforma.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Jugador.tscn" type="PackedScene" id=2]
+
+[node name="Nivel" type="Node"]
+
+[node name="Plataformas" type="Node" parent="."]
+
+[node name="Plataforma" parent="Plataformas" instance=ExtResource( 1 )]
+position = Vector2( 533, 481 )
+scale = Vector2( 12, 1 )
+
+[node name="Plataforma2" parent="Plataformas" instance=ExtResource( 1 )]
+position = Vector2( 239, 331 )
+scale = Vector2( 4, 0.25 )
+
+[node name="Plataforma3" parent="Plataformas" instance=ExtResource( 1 )]
+position = Vector2( 745, 284 )
+scale = Vector2( 4, 0.25 )
+
+[node name="Jugador" parent="." instance=ExtResource( 2 )]
+position = Vector2( 490.815, 337.907 )
+velocidad_correr = 400
+velocidad_salto = -1000
+gravedad = 50
